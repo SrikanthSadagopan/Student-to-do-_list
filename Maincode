@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>
+            Student Form
+        </title>
+    </head>
+    <body style="background-color: black;color: white;">
+  
+    <center>
+        <h1>Student Form</h1>
+        <div id="rik">
+    <table border="4">
+       <tr>
+        <th>Name</th><td><input id="one" type="text"></td>
+    </tr>
+    <tr>
+        <th>Age</th><td><input id="two"type="number"></td>
+    </tr>
+    <tr>
+        <th>Gender</th><td><input id="three" type="radio" name="Gender">Male <input id="four"type="radio" name="Gender">Female</td>
+    </tr>
+    <tr>
+        <th>Course</th><td>
+            <select  id="five" style="width: 100%;">
+                <option>Python</option>
+                <option>Javascript</option>
+                <option>Java</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Email</th><td><input id="six" type="email"></td>
+     
+    </tr>
+    <tr>
+        <td colspan="2" align="center" style="background-color: cyan;">
+        <button onclick="update()" id="sri" style=" color: white; background-color: black;">Save</button>
+    </td>
+    </tr>
+ 
+    </table>
+    <br>
+    <br>
+</div>
+
+       <table id="riku" border="4">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Courses</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Action</th>
+            </tr>
+        </table>
+        <script>
+          
+            function update()
+            {
+                var name=document.getElementById("one").value
+                var age=document.getElementById("two").value
+                var gender=document.querySelector('input[name="Gender"]:checked').value
+                var course=document.getElementById("five").value
+                var email=document.getElementById("six").value
+               
+                var var1=document.getElementById("riku")
+                var row=var1.insertRow(-1);
+                var c1=row.insertCell(0);
+                var c2=row.insertCell(1);
+                var c3=row.insertCell(2);
+                var c4=row.insertCell(3);
+                var c5=row.insertCell(4);
+                var c6=row.insertCell(5);
+
+                c1.innerHTML=name;
+                c2.innerHTML=age;
+                c3.innerHTML=gender;
+                c4.innerHTML=course;
+                c5.innerHTML=email;
+                c6.innerHTML='<button onclick="del(event)">Delete</button>'
+                }
+                function del(event)
+                {
+                    event.target.parentElement.parentElement.remove()
+                }
+
+        </script>
+   
+</center>
+      
+</body>
+</html>

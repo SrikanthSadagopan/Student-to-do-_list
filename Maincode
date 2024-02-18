@@ -17,7 +17,7 @@
         <th>Age</th><td><input id="two"type="number"></td>
     </tr>
     <tr>
-        <th>Gender</th><td><input id="three" type="radio" name="Gender">Male <input id="four"type="radio" name="Gender">Female</td>
+        <th>Gender</th><td><input id="three" type="radio" name="Gender" value="male">Male <input id="four"type="radio" name="Gender" value="female">Female</td>
     </tr>
     <tr>
         <th>Course</th><td>
@@ -75,8 +75,8 @@
 
                 c1.innerHTML=name;
                 c2.innerHTML=age;
-                c3.innerHTML=gender;
-                c4.innerHTML=course;
+                c3.innerHTML=course;
+                c4.innerHTML=gender;
                 c5.innerHTML=email;
                 c6.innerHTML='<button onclick="del(event)">Delete</button>'
                 }
